@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #030303; }
+body { font-family: Arial, Helvetica, sans-serif; }
+input[type="range"] { accent-color: #facc15; }
+
+.panel {
+  background: linear-gradient(180deg, rgba(17, 17, 17, .98), rgba(3, 3, 3, .98));
+  border: 1px solid rgba(234, 179, 8, .28);
+  box-shadow: 0 24px 70px rgba(0,0,0,.35);
+}
+
+.card-shadow {
+  filter: drop-shadow(0 32px 46px rgba(0,0,0,.75));
+}
+
+.card-bg-gold {
+  background:
+    radial-gradient(circle at 50% 8%, rgba(255, 238, 160, .76), transparent 21%),
+    radial-gradient(circle at 52% 35%, rgba(171, 112, 23, .44), transparent 41%),
+    linear-gradient(145deg, #050505 0%, #211508 48%, #050505 100%);
+}
+.card-bg-carbon {
+  background:
+    radial-gradient(circle at 50% 8%, rgba(125, 211, 252, .65), transparent 21%),
+    radial-gradient(circle at 52% 35%, rgba(30, 64, 175, .48), transparent 41%),
+    linear-gradient(145deg, #020617 0%, #0f172a 50%, #020617 100%);
+}
+.card-bg-neon {
+  background:
+    radial-gradient(circle at 50% 8%, rgba(240, 171, 252, .7), transparent 21%),
+    radial-gradient(circle at 52% 35%, rgba(126, 34, 206, .5), transparent 41%),
+    linear-gradient(145deg, #07020a 0%, #2e1065 50%, #020202 100%);
+}
+.card-bg-red {
+  background:
+    radial-gradient(circle at 50% 8%, rgba(252, 165, 165, .7), transparent 21%),
+    radial-gradient(circle at 52% 35%, rgba(127, 29, 29, .5), transparent 41%),
+    linear-gradient(145deg, #090202 0%, #3f0b0b 50%, #020202 100%);
+}
+.card-bg-silver {
+  background:
+    radial-gradient(circle at 50% 8%, rgba(255,255,255,.8), transparent 21%),
+    radial-gradient(circle at 52% 35%, rgba(161,161,170,.46), transparent 41%),
+    linear-gradient(145deg, #09090b 0%, #3f3f46 50%, #050505 100%);
+}
+
+.export-safe * { transform-style: flat !important; }
