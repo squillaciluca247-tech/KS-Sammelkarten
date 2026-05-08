@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #030303;
+}
+
+input[type="range"] {
+  accent-color: #eab308;
+}
+
+
+@keyframes holoSweep {
+  0% {
+    transform: translateX(-120%) rotate(8deg);
+  }
+  55% {
+    transform: translateX(120%) rotate(8deg);
+  }
+  100% {
+    transform: translateX(120%) rotate(8deg);
+  }
+}
+
+@keyframes cardGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(234, 179, 8, .25));
+  }
+  50% {
+    filter: drop-shadow(0 0 44px rgba(234, 179, 8, .55));
+  }
+}
+
+@keyframes packReveal {
+  0% {
+    transform: scale(.55) rotateY(80deg);
+    opacity: 0;
+    filter: brightness(.4) blur(8px);
+  }
+  35% {
+    transform: scale(1.08) rotateY(0deg);
+    opacity: 1;
+    filter: brightness(1.8) blur(0);
+  }
+  70% {
+    transform: scale(1) rotateY(0deg);
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+  100% {
+    transform: scale(1.25) rotateY(0deg);
+    opacity: 0;
+    filter: brightness(2) blur(10px);
+  }
+}
+
+.animate-holoSweep {
+  animation: holoSweep 3.8s ease-in-out infinite;
+}
+
+.animate-cardGlow {
+  animation: cardGlow 3.5s ease-in-out infinite;
+}
+
+.animate-packReveal {
+  animation: packReveal 2.4s ease-in-out forwards;
+}
