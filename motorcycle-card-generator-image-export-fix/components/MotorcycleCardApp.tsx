@@ -55,15 +55,11 @@ export default function MotorcycleCardApp() {
   const downloadPNG = async () => {
     const canvas = await renderCardCanvas();
     if (!canvas) return;
-    canvas.toBlob((blob) => {
-      if (!blob) return;
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.download = `${rider.name || "sammelkarte"}.png`;
-      link.href = url;
-      link.click();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-    }, "image/png");
+    const dataUrl = canvas.toDataURL("image/png", 1.0);
+    const link = document.createElement("a");
+    link.download = `${rider.name || "sammelkarte"}.png`;
+    link.href = dataUrl;
+    link.click();
   };
 
   const downloadPDF = async () => {

@@ -51,3 +51,11 @@ Diese Version ist ein gezielter Neuaufbau nach dem Screenshot.
 - Bild nutzt feste CSS-Werte für width, height, objectFit und objectPosition
 - html2canvas Export-Skalierung auf 2 reduziert
 - foreignObjectRendering aktiviert
+
+
+## Stable Export Fix
+
+- foreignObjectRendering deaktiviert
+- PNG Export nutzt dataURL
+- SVG Export stabilisiert
+- schwarzer/leerer Export behoben
