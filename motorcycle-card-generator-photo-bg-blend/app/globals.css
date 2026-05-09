@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #030303; color: white; }
+body { font-family: Arial, Helvetica, sans-serif; }
+input[type="range"] { accent-color: #facc15; }
+
+.panel {
+  border: 1px solid rgba(234, 179, 8, .28);
+  background: linear-gradient(180deg, rgba(15,16,17,.97), rgba(2,2,2,.97));
+  box-shadow: 0 24px 70px rgba(0,0,0,.35);
+}
+
+.input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(234,179,8,.28);
+  background: rgba(0,0,0,.5);
+  padding: 9px 12px;
+  color: white;
+  outline: none;
+}
+
+.input:focus { border-color: rgba(250,204,21,.9); }
+
+.btn {
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 900;
+  transition: .15s ease;
+}
+
+.btn-gold {
+  background: linear-gradient(180deg, #fde68a, #ca8a04);
+  color: #080808;
+}
+
+.btn-dark {
+  background: #171717;
+  color: #fde68a;
+  border: 1px solid rgba(234,179,8,.22);
+}
+
+.card-canvas {
+  width: min(92vw, 506px);
+  height: auto;
+  border-radius: 22px;
+  filter: drop-shadow(0 30px 55px rgba(0,0,0,.75));
+}
+
+.small-card {
+  border: 1px solid rgba(234,179,8,.35);
+  background: rgba(0,0,0,.35);
+}
